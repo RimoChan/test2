@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+th {
+    word-break: break-all;
+}
+
 td img {
-    width: 200px;
+    transform: scale(1.1);
 }
