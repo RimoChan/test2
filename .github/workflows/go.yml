@@ -12,5 +12,6 @@ jobs:
       - name: aaa
         run: |
           git checkout -b pg
-          find . -name "*.md" -exec git rm {} \
+          ls
+          find . -name "*.md" -exec git rm {} \;
           git push --force origin pg
