@@ -10,4 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: aaa
-        run: git push origin pg
+        run: |
+          git checkout -b pg
+          find . -name "*.md" -exec git rm {} \
+          git push --force origin pg
