@@ -13,8 +13,8 @@ with open('readme.md', 'w', encoding='utf8') as f:
 
 for i in [*Path('.').glob('*.jpg'), *Path('.').glob('*.png')]:
     img = cv2.imread(str(i))
-    if max(img.shape) > 400:
-        r = 400 / max(img.shape)
+    if max(img.shape) > 2000:
+        r = 2000 / max(img.shape)
         img = cv2.resize(img, [int(img.shape[1]*r), int(img.shape[0] * r)], interpolation=cv2.INTER_AREA)
     for q in range(80, 20, -10):
         cv2.imwrite(str(i.with_suffix('.webp')), img, [cv2.IMWRITE_WEBP_QUALITY, q])
