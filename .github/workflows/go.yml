@@ -18,5 +18,4 @@ jobs:
           find . -name "*.md" -exec git rm {} \;
           git add .
           git commit -m "删除！"
-          git push
           git push --set-upstream --force origin pg
