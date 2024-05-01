@@ -14,4 +14,7 @@ jobs:
           git checkout -b pg
           ls
           find . -name "*.md" -exec git rm {} \;
-          git push --force origin pg
+      - name: push
+        run: git push --force origin pg
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
