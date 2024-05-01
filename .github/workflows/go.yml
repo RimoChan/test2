@@ -19,4 +19,4 @@ jobs:
           git add .
           git commit -m "删除！"
           git push
-          git push --force origin pg
+          git push --set-upstream --force origin pg
