@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: aaa
-        run: |
-          git checkout -b pg
-          ls
+      - run: |
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           find . -name "*.md" -exec git rm {} \;
-      - name: push
-        run: git push --force origin pg
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          git add .
+          git commit -m "删除！"
+          git push
+          git push --force origin pg
